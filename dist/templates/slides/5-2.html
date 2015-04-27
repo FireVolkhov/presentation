@@ -1,0 +1,13 @@
+<div><div class="b-slide-header"><div class="b-slide-number">05 - 2</div><div class="b-slide-title">Применение масштаба</div></div><div class="b-slide-content"><pre class="b-code"><code data-language="coffeescript">scaleNumber: (number, scale) ->
+ Math.max(Math.round(number * scale), 1)
+ 
+scaleFont: (font, scale) ->
+ font.replace /\d+px/g, (match) =>
+  @scaleNumber(parseInt(match), scale) + 'px'
+  
+applyScale: (style, scale) ->
+ css = _.copy style
+ css.sizes.headerHeight = @scaleNumber css.sizes.headerHeight, scale
+ ...
+ css.fonts.main = @scaleFont css.fonts.main, scale
+ ...</code></pre></div></div>
