@@ -1,0 +1,15 @@
+doctype html
+html(ng-app = "App")
+	head(lang = "ru")
+		meta(charset = "UTF-8")
+		title Презенташка
+		script(src = "dist/scripts/libs/angular.js")
+		script(src = "dist/scripts/libs/angular-ui-router.js")
+		script(src = "dist/scripts/app.js")
+		script(src = "dist/scripts/templates.js")
+		link(href = "dist/styles/app.css"
+			rel = "stylesheet")
+
+	body
+		.b-app(ng-controller = "appCtrl")
+			.b-page(ui-view = "page")
