@@ -21,13 +21,32 @@ angular.module('App').run(['$templateCache', function($templateCache) {
   );
 
 
+  $templateCache.put('app/slides/4-1.html',
+    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">04.1</div><div class=\"b-slide-title\">Как это выглядет в коде</div></div><div class=\"b-slide-content\"><div><a href=\"https://github.com/FireVolkhov/CanvasService\">Используемый сервис</a></div><pre class=\"b-code\"><code data-language=\"coffeescript\">CanvasService.setContext @context\n" +
+    "\n" +
+    "nameStyle =\n" +
+    " fillStyle: fillStyleName\n" +
+    " font: css.fonts.timeOffInDay\n" +
+    " antiAliased: true\n" +
+    " antiAliasedBackgroundColor: backgroundColor\n" +
+    " lineHeight: css.lineHeight\n" +
+    " \n" +
+    "CanvasService.text name,\n" +
+    " x: timeOffBlock.topLeft.x + @style.paddingHorizontalDayText\n" +
+    " y: timeOffBlock.topLeft.y + (css.sizes.rowHeight - css.lineHeight) / 2\n" +
+    ", nameStyle\n" +
+    "\n" +
+    "...</code></pre></div></div>"
+  );
+
+
   $templateCache.put('app/slides/4.html',
     "<div ng-controller=\"slide4Ctrl\"><div class=\"b-slide-header\"><div class=\"b-slide-number\">04</div><div class=\"b-slide-title\">Сглаживания текста</div></div><div class=\"b-slide-content\"><div class=\"b-text\"><div>Сглаженный текст браузером</div><img width=\"621\" height=\"63\" src=\"./dist/images/Image_4.jpg\" style=\"margin: 8px 0 0 0; border: 1px solid rgba(0, 0, 0, 0.1)\"></div><div class=\"b-text\"><div>Текст в канвасе</div><img width=\"671\" height=\"72\" src=\"./dist/images/Image_3.jpg\" style=\"margin: 8px 0 0 0; border: 1px solid rgba(0, 0, 0, 0.1)\"></div><div class=\"b-text\"><div>Сглаженный текст в канвасе</div><div><span>Алгоритм расчета&nbsp;</span><a href=\"https://bel.fi/alankila/lcd/\">https://bel.fi/alankila/lcd/</a></div><img width=\"525\" height=\"57\" src=\"./dist/images/Image_2.jpg\" style=\"margin: 8px 0 0 0; border: 1px solid rgba(0, 0, 0, 0.1)\"></div></div></div>"
   );
 
 
   $templateCache.put('app/slides/5-1.html',
-    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">05 - 1</div><div class=\"b-slide-title\">Css в канвасе</div></div><div class=\"b-slide-content\"><div>Псевдо css, чтоб проще понимать</div><pre class=\"b-code\"><code data-language=\"coffeescript\">config:\n" +
+    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">05.1</div><div class=\"b-slide-title\">Css в канвасе</div></div><div class=\"b-slide-content\"><div>Псевдо css, чтоб проще понимать</div><pre class=\"b-code\"><code data-language=\"coffeescript\">config:\n" +
     " sizes:\n" +
     "  headerHeight: 56\n" +
     "  leftBlockWidth: 256\n" +
@@ -44,7 +63,7 @@ angular.module('App').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/slides/5-2.html',
-    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">05 - 2</div><div class=\"b-slide-title\">Применение масштаба</div></div><div class=\"b-slide-content\"><pre class=\"b-code\"><code data-language=\"coffeescript\">scaleNumber: (number, scale) ->\n" +
+    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">05.2</div><div class=\"b-slide-title\">Применение масштаба</div></div><div class=\"b-slide-content\"><pre class=\"b-code\"><code data-language=\"coffeescript\">scaleNumber: (number, scale) ->\n" +
     " Math.max(Math.round(number * scale), 1)\n" +
     " \n" +
     "scaleFont: (font, scale) ->\n" +

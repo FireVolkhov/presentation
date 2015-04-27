@@ -1,0 +1,15 @@
+<div><div class="b-slide-header"><div class="b-slide-number">04.1</div><div class="b-slide-title">Как это выглядет в коде</div></div><div class="b-slide-content"><div><a href="https://github.com/FireVolkhov/CanvasService">Используемый сервис</a></div><pre class="b-code"><code data-language="coffeescript">CanvasService.setContext @context
+
+nameStyle =
+ fillStyle: fillStyleName
+ font: css.fonts.timeOffInDay
+ antiAliased: true
+ antiAliasedBackgroundColor: backgroundColor
+ lineHeight: css.lineHeight
+ 
+CanvasService.text name,
+ x: timeOffBlock.topLeft.x + @style.paddingHorizontalDayText
+ y: timeOffBlock.topLeft.y + (css.sizes.rowHeight - css.lineHeight) / 2
+, nameStyle
+
+...</code></pre></div></div>

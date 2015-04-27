@@ -29,6 +29,9 @@ angular.module 'App', ['ui.router']
 		name: '4 слайд'
 		template: 'app/slides/4.html'
 	,
+		name: '4 слайд'
+		template: 'app/slides/4-1.html'
+	,
 		name: '5 слайд'
 		template: 'app/slides/5.html'
 	,
