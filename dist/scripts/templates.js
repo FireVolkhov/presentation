@@ -104,7 +104,7 @@ angular.module('App').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/slides/8.html',
-    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">08</div><div class=\"b-slide-title\">Заключение</div></div><div class=\"b-slide-content\"><div><span>Презенташка&nbsp;</span><a href=\"\">GitHub</a></div><div><span>Моя почта&nbsp;</span><a href=\"FireVolkhov@gmail.com\">FireVolkhov@gmail.com</a></div></div></div>"
+    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">08</div><div class=\"b-slide-title\">Заключение</div></div><div class=\"b-slide-content\"><div><span>Презенташка&nbsp;</span><a href=\"http://firevolkhov.github.io/presentation/\">http://firevolkhov.github.io/presentation/</a></div><div><span>Моя почта&nbsp;</span><a href=\"FireVolkhov@gmail.com\">FireVolkhov@gmail.com</a></div></div></div>"
   );
 
 
