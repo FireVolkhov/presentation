@@ -29,6 +29,12 @@
       name: '5 слайд',
       template: 'app/slides/5.html'
     }, {
+      name: '5 слайд',
+      template: 'app/slides/5-1.html'
+    }, {
+      name: '5 слайд',
+      template: 'app/slides/5-2.html'
+    }, {
       name: '6 слайд',
       template: 'app/slides/6.html'
     }, {
@@ -76,6 +82,14 @@
     if ((_ref = $state.params) != null ? _ref.number : void 0) {
       return $scope.slideTemplate = SLIDES[$state.params.number - 1].template;
     }
+  }).directive('code', function() {
+    return {
+      link: function() {
+        return setTimeout(function() {
+          return Rainbow.color();
+        });
+      }
+    };
   }).controller('slide4Ctrl', function($q, $scope, $document, $timeout) {
     return $timeout(function() {});
   }).controller('slide3Ctrl', function($q, $scope, $document, $timeout) {
@@ -175,8 +189,7 @@
         }
         return _results;
       }).then(function() {
-        $scope.canvas.push(new Date().getTime() - start);
-        return testTarget.innerHTML = '';
+        return $scope.canvas.push(new Date().getTime() - start);
       }).then(function() {
         return $timeout(angular.noop, 1, false);
       }).then(function() {

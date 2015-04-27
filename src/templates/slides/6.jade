@@ -3,6 +3,16 @@ div
 		.b-slide-number 06
 		.b-slide-title Мониторы Retina
 	.b-slide-content
-		div Изображение на мониторе с devicePixelRatio отличным от 1
-		div(style = "margin: 16px 0 0 0; border: 1px solid rgba(0, 0, 0, 0.1); overflow: hidden; height: 496px")
-			img(height = "496" src = "./dist/images/Image_.jpg" style="")
+		div Простое решение
+		pre.b-code
+			code(data-language = "coffeescript").
+				hidefCanvasWidth = $(hidefCanvas).attr('width')
+				hidefCanvasHeight = $(hidefCanvas).attr('height')
+
+				$(hidefCanvas).attr('width', hidefCanvasWidth * window.devicePixelRatio)
+				$(hidefCanvas).attr('height', hidefCanvasHeight * window.devicePixelRatio)
+				$(hidefCanvas).css('width', hidefCanvasWidth)
+				$(hidefCanvas).css('height', hidefCanvasHeight)
+				hidefContext.scale(window.devicePixelRatio, window.devicePixelRatio)
+
+				...

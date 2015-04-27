@@ -4,7 +4,7 @@
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */
-/* line 106, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em;
@@ -617,9 +617,9 @@ th {
 
 /* line 16, ../../src/styles/_b-slide.sass */
 .b-slide-number {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
   background: #427185;
   font-family: Arial, Verdana, sans-serif;
   font-size: 48px;
@@ -631,17 +631,20 @@ th {
 
 /* line 28, ../../src/styles/_b-slide.sass */
 .b-slide-title {
-  padding: 20px 50px 20px 142px;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  padding: 20px 50px 20px 36px;
   font-size: 48px;
   line-height: 60px;
 }
 
-/* line 33, ../../src/styles/_b-slide.sass */
+/* line 36, ../../src/styles/_b-slide.sass */
 .b-slide-content {
   padding: 48px 0;
 }
 
-/* line 36, ../../src/styles/_b-slide.sass */
+/* line 39, ../../src/styles/_b-slide.sass */
 .b-test-button {
   margin: 24px 0 0 0;
   padding: 16px 34px;
@@ -651,34 +654,48 @@ th {
   display: inline-block;
 }
 
-/* line 44, ../../src/styles/_b-slide.sass */
+/* line 47, ../../src/styles/_b-slide.sass */
 .b-table {
   display: table;
 }
 
-/* line 47, ../../src/styles/_b-slide.sass */
+/* line 50, ../../src/styles/_b-slide.sass */
 .b-table-row {
   display: table-row;
 }
 
-/* line 50, ../../src/styles/_b-slide.sass */
+/* line 53, ../../src/styles/_b-slide.sass */
 .b-table-col {
   display: table-cell;
+  padding: 0 8px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* line 53, ../../src/styles/_b-slide.sass */
+/* line 59, ../../src/styles/_b-slide.sass */
+.b-table-col--content {
+  text-align: right;
+  min-width: 100px;
+}
+
+/* line 63, ../../src/styles/_b-slide.sass */
+.b-table-row--header {
+  text-align: center;
+}
+
+/* line 66, ../../src/styles/_b-slide.sass */
 #test-target {
   margin: 24px 0 0 0;
   height: 500px;
   overflow: auto;
 }
 
-/* line 58, ../../src/styles/_b-slide.sass */
+/* line 71, ../../src/styles/_b-slide.sass */
 .test-table {
   width: calc(25 * 16px);
 }
 
-/* line 61, ../../src/styles/_b-slide.sass */
+/* line 74, ../../src/styles/_b-slide.sass */
 .test-cell {
   display: inline-block;
   float: left;
@@ -693,19 +710,19 @@ th {
   font-size: 14px;
 }
 
-/* line 74, ../../src/styles/_b-slide.sass */
+/* line 87, ../../src/styles/_b-slide.sass */
 .b-antialiasing-text {
   line-height: 50px;
   font-size: 24px;
 }
 
-/* line 78, ../../src/styles/_b-slide.sass */
+/* line 91, ../../src/styles/_b-slide.sass */
 #not-antialiasing-text,
 #canvas-antialiasing-text {
   display: block;
 }
 
-/* line 82, ../../src/styles/_b-slide.sass */
+/* line 95, ../../src/styles/_b-slide.sass */
 img {
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
@@ -715,16 +732,23 @@ img {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-/* line 90, ../../src/styles/_b-slide.sass */
+/* line 103, ../../src/styles/_b-slide.sass */
 .b-text {
   margin: 0 0 8px 0;
   height: 160px;
 }
 
-/* line 95, ../../src/styles/_b-slide.sass */
+/* line 108, ../../src/styles/_b-slide.sass */
 a, a:active, a:focus {
   color: #3473CF;
   text-decoration: none;
   outline: none;
   border: none;
+}
+
+/* line 116, ../../src/styles/_b-slide.sass */
+.b-code {
+  font-size: 24px;
+  line-height: 1.5em;
+  margin: 24px 0 0 0;
 }

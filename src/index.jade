@@ -3,12 +3,15 @@ html(ng-app = "App")
 	head(lang = "ru")
 		meta(charset = "UTF-8")
 		title Презенташка
-		script(src = "dist/scripts/libs/angular.js")
-		script(src = "dist/scripts/libs/angular-ui-router.js")
-		script(src = "dist/scripts/app.js")
-		script(src = "dist/scripts/templates.js")
-		link(href = "dist/styles/app.css"
-			rel = "stylesheet")
+		script(src = "./dist/scripts/libs/angular.js")
+		script(src = "./dist/scripts/libs/angular-ui-router.js")
+		script(src = "./dist/scripts/libs/rainbow.js")
+		script(src = "./dist/scripts/libs/generic.js")
+		script(src = "./dist/scripts/libs/coffeescript.js")
+		script(src = "./dist/scripts/app.js")
+		script(src = "./dist/scripts/templates.js")
+		link(href = "./dist/styles/app.css" rel = "stylesheet")
+		link(href = "./src/styles/themes/all-hallows-eve.css" rel = "stylesheet")
 
 	body
 		.b-app(ng-controller = "appCtrl")

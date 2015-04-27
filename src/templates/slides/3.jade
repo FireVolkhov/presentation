@@ -4,7 +4,7 @@ div(ng-controller = "slide3Ctrl")
 		.b-slide-title Производительность
 	.b-slide-content
 		.b-table
-			.b-table-row
+			.b-table-row.b-table-row--header
 				.b-table-col
 				.b-table-col Chrome
 				.b-table-col FF
@@ -13,25 +13,25 @@ div(ng-controller = "slide3Ctrl")
 				.b-table-col IE 10
 			.b-table-row
 				.b-table-col Вставить html строкой
-				.b-table-col 92 ms
-				.b-table-col 177 ms
-				.b-table-col 91 ms
-				.b-table-col 302 ms
-				.b-table-col 188 ms
+				.b-table-col.b-table-col--content 92 
+				.b-table-col.b-table-col--content 177 
+				.b-table-col.b-table-col--content 91 
+				.b-table-col.b-table-col--content 302 
+				.b-table-col.b-table-col--content 188 
 			.b-table-row
 				.b-table-col Вставить html по элементам
-				.b-table-col 145 ms
-				.b-table-col 213 ms
-				.b-table-col 68 ms
-				.b-table-col 743 ms
-				.b-table-col 477 ms
+				.b-table-col.b-table-col--content 145 
+				.b-table-col.b-table-col--content 213 
+				.b-table-col.b-table-col--content 68 
+				.b-table-col.b-table-col--content 743 
+				.b-table-col.b-table-col--content 477 
 			.b-table-row
 				.b-table-col Canvas
-				.b-table-col 76 ms
-				.b-table-col 323 ms
-				.b-table-col 83 ms
-				.b-table-col 193 ms
-				.b-table-col 266 ms
+				.b-table-col.b-table-col--content 76 
+				.b-table-col.b-table-col--content 323 
+				.b-table-col.b-table-col--content 83 
+				.b-table-col.b-table-col--content 193 
+				.b-table-col.b-table-col--content 266 
 
 		.b-test-button(ng-click = "test()") Потестить
 		#test-target

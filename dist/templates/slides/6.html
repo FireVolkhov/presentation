@@ -1,1 +1,10 @@
-<div><div class="b-slide-header"><div class="b-slide-number">06</div><div class="b-slide-title">Мониторы Retina</div></div><div class="b-slide-content"><div>Изображение на мониторе с devicePixelRatio отличным от 1</div><div style="margin: 16px 0 0 0; border: 1px solid rgba(0, 0, 0, 0.1); overflow: hidden; height: 496px"><img height="496" src="./dist/images/Image_.jpg" style=""/></div></div></div>
+<div><div class="b-slide-header"><div class="b-slide-number">06</div><div class="b-slide-title">Мониторы Retina</div></div><div class="b-slide-content"><div>Простое решение</div><pre class="b-code"><code data-language="coffeescript">hidefCanvasWidth = $(hidefCanvas).attr('width')
+hidefCanvasHeight = $(hidefCanvas).attr('height')
+
+$(hidefCanvas).attr('width', hidefCanvasWidth * window.devicePixelRatio)
+$(hidefCanvas).attr('height', hidefCanvasHeight * window.devicePixelRatio)
+$(hidefCanvas).css('width', hidefCanvasWidth)
+$(hidefCanvas).css('height', hidefCanvasHeight)
+hidefContext.scale(window.devicePixelRatio, window.devicePixelRatio)
+
+...</code></pre></div></div>

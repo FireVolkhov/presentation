@@ -32,6 +32,12 @@ angular.module 'App', ['ui.router']
 		name: '5 слайд'
 		template: 'app/slides/5.html'
 	,
+		name: '5 слайд'
+		template: 'app/slides/5-1.html'
+	,
+		name: '5 слайд'
+		template: 'app/slides/5-2.html'
+	,
 		name: '6 слайд'
 		template: 'app/slides/6.html'
 	,
@@ -75,6 +81,11 @@ angular.module 'App', ['ui.router']
 
 		if $state.params?.number
 			$scope.slideTemplate = SLIDES[$state.params.number - 1].template
+
+	.directive 'code', ->
+		link: ->
+			setTimeout ->
+				Rainbow.color();
 
 
 	.controller 'slide4Ctrl', ($q, $scope, $document, $timeout) ->
@@ -185,7 +196,7 @@ angular.module 'App', ['ui.router']
 
 				.then ->
 					$scope.canvas.push new Date().getTime() - start
-					testTarget.innerHTML = ''
+#					testTarget.innerHTML = ''
 				.then -> $timeout angular.noop, 1, false
 				.then ->
 					if testI++ <= testCount
