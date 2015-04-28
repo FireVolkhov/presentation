@@ -99,7 +99,7 @@ angular.module('App').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('app/slides/7.html',
-    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">07</div><div class=\"b-slide-title\">Прочие мелкие баги</div></div><div class=\"b-slide-content\"><div>1. Сглаживание текста, canvas, css3 анимация в Хроме</div><div>2. IE и доступ к холсту</div><div>3. drawImage У всех кроме Хрома</div></div></div>"
+    "<div><div class=\"b-slide-header\"><div class=\"b-slide-number\">07</div><div class=\"b-slide-title\">Прочие мелкие баги</div></div><div class=\"b-slide-content\"><div class=\"b-p\">1. Потеря сглаживание текста в элементах из-за canvas и css3 анимация в Хроме</div><div class=\"b-p\">2. В IE 11 закрыт доступ к холсту через context.getImageData из события mousemove</div><div class=\"b-p\">3. context.drawImage при любых не точностях выкидывает эксепшины во всех браузерах кроме Хрома</div></div></div>"
   );
 
 

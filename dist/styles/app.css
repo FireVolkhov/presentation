@@ -752,3 +752,12 @@ a, a:active, a:focus {
   line-height: 1.5em;
   margin: 24px 0 0 0;
 }
+
+/* line 121, ../../src/styles/_b-slide.sass */
+.b-p {
+  padding-bottom: 12px;
+}
+/* line 124, ../../src/styles/_b-slide.sass */
+.b-p:first-letter {
+  padding-left: 24px;
+}
