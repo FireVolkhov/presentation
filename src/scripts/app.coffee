@@ -1,7 +1,9 @@
 angular.module 'App', ['ui.router']
 	.config ($stateProvider, $urlRouterProvider) ->
 		$urlRouterProvider
-			.otherwise "/slide/1"
+			.when '', '/slide/1'
+			.when '/', '/slide/1'
+			.otherwise '/slide/1'
 
   	$stateProvider
 			.state 'root',

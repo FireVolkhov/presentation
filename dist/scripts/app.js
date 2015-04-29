@@ -1,6 +1,6 @@
 (function() {
   angular.module('App', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/slide/1");
+    $urlRouterProvider.when('', '/slide/1').when('/', '/slide/1').otherwise('/slide/1');
     return $stateProvider.state('root', {
       url: "/"
     }).state('slide', {
